@@ -21,37 +21,19 @@ Before installing Quack, ensure your system meets these requirements:
 Download the latest release for your platform:
 
 **macOS**:
-```bash
-# Download DMG from GitHub Releases
-# Note: quack-app repository is currently private
-# Contact the team for access
-```
+1. Download the DMG file from GitHub Releases
+2. Open the downloaded DMG file
+3. Drag Quack into your Applications folder
+4. Launch Quack from Applications
 
-### Option 2: Build from Source
-
-If you want to build Quack from source:
-
-```bash
-# Clone the repository (private repo - requires access)
-git clone https://github.com/alekdob/quack-app
-cd quack-app
-
-# Install dependencies
-npm install
-
-# Build the app
-npm run tauri:build
-
-# The built app will be in src-tauri/target/release/
-```
+**Note**: quack-app repository is currently private. Contact the team for access to the DMG file.
 
 ## First Launch
 
-After installation:
+After launching Quack for the first time:
 
-1. **Launch Quack** from your Applications folder (macOS)
-2. **Grant permissions** when prompted (terminal access, file system)
-3. **Create your first agent**
+1. **Grant permissions** when prompted (terminal access, file system)
+2. **Create your first agent** (see below)
 
 ### Setting up Your First Agent
 
