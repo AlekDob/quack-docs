@@ -7,9 +7,7 @@ Learn how to install and set up Quack on your machine.
 Before installing Quack, ensure your system meets these requirements:
 
 ### Operating System
-- **macOS** 10.15 (Catalina) or later
-- **Windows** 10/11
-- **Linux** (Ubuntu 20.04+, Fedora 34+, or equivalent)
+- **macOS** 10.15 (Catalina) or later (currently the only supported platform)
 
 ### Software Requirements
 - **Node.js** 18.17.0 or higher
@@ -25,19 +23,8 @@ Download the latest release for your platform:
 **macOS**:
 ```bash
 # Download DMG from GitHub Releases
-# Coming soon...
-```
-
-**Windows**:
-```bash
-# Download MSI installer from GitHub Releases
-# Coming soon...
-```
-
-**Linux**:
-```bash
-# Download AppImage or .deb package
-# Coming soon...
+# Note: quack-app repository is currently private
+# Contact the team for access
 ```
 
 ### Option 2: Build from Source
@@ -45,7 +32,7 @@ Download the latest release for your platform:
 If you want to build Quack from source:
 
 ```bash
-# Clone the repository
+# Clone the repository (private repo - requires access)
 git clone https://github.com/alekdob/quack-app
 cd quack-app
 
@@ -62,29 +49,36 @@ npm run tauri:build
 
 After installation:
 
-1. **Launch Quack** from your Applications folder (macOS) or Start Menu (Windows)
+1. **Launch Quack** from your Applications folder (macOS)
 2. **Grant permissions** when prompted (terminal access, file system)
-3. **Configure Claude API** (if you haven't already)
+3. **Create your first agent**
 
-### Setting up Claude API
+### Setting up Your First Agent
 
-Quack requires a Claude API key to function. You can get one from [console.anthropic.com](https://console.anthropic.com).
+Quack is a multi-agentic IDE, so you need to create at least one agent to start working:
 
-**In Quack**:
-1. Open Settings (Cmd/Ctrl + ,)
-2. Navigate to "API Configuration"
-3. Enter your Anthropic API key
-4. Click "Save"
+**Step 1: Create an Agent**
+1. Click the **"+"** button in the Agents panel
+2. Configure your agent:
+   - **Name**: Give your agent a meaningful name (e.g., "Frontend Dev", "Code Reviewer")
+   - **Personality**: Define the agent's role and behavior
+   - **API Key**: Enter your Anthropic API key from [console.anthropic.com](https://console.anthropic.com)
+   - **Skills**: Select which skills the agent should have access to
+   - **Droids**: Choose which droids (subagents) the agent can use
+3. Click **"Create Agent"**
 
-**Alternatively**, set an environment variable:
+**Step 2: Login to Claude**
+1. Open a terminal in your project directory
+2. Run the Claude login command:
+   ```bash
+   claude /login
+   ```
+3. Follow the authentication flow
 
-```bash
-# macOS/Linux
-export ANTHROPIC_API_KEY="sk-ant-your-key-here"
-
-# Windows
-setx ANTHROPIC_API_KEY "sk-ant-your-key-here"
-```
+**Step 3: Test Your Setup**
+1. Navigate to the Chat panel
+2. Send a message to your agent
+3. Try asking: "Can you help me understand this project?"
 
 ## Verify Installation
 
@@ -102,16 +96,17 @@ If everything works, you're ready to start using Quack! 🎉
 ### Terminal Not Working
 
 If terminals aren't launching:
-- **macOS**: Grant Terminal access in System Preferences > Security & Privacy
-- **Windows**: Run Quack as Administrator
-- **Linux**: Check shell configuration in `~/.bashrc` or `~/.zshrc`
+- **macOS**: Grant Terminal access in System Preferences > Security & Privacy > Privacy > Developer Tools
+- Check shell configuration in `~/.bashrc` or `~/.zshrc`
+- Restart Quack after granting permissions
 
-### Claude API Errors
+### Claude Authentication Issues
 
-If you see API errors:
-- Verify your API key is correct
+If `claude /login` fails:
+- Verify your API key is correct in the agent configuration
 - Check you have credits in your Anthropic account
 - Ensure you're connected to the internet
+- Try creating a new agent with a fresh API key
 
 ### File Explorer Not Showing Files
 
