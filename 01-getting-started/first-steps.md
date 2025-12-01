@@ -156,11 +156,9 @@ Speed up your workflow with keyboard shortcuts:
 
 Now that you're familiar with the basics:
 
-- Explore [Core Concepts](../02-core-concepts/what-is-claude-code) to understand how Claude Code works
-- Learn [Prompting Basics](../02-core-concepts/prompting-basics) for better AI interactions
-- Discover [Advanced Techniques](../03-advanced-techniques/agent-architecture) for power users
+- Learn [Advanced Techniques](../03-advanced-techniques/prompt-engineering) for better AI interactions
+- Discover [Best Practices](../04-best-practices/prompting-patterns) for power users
 
 ---
 
-**Previous**: [← Installation](./installation)
-**Next**: [What is Claude Code? →](../02-core-concepts/what-is-claude-code)
+**Previous**: [Installation](./installation)

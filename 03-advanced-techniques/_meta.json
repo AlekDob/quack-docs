@@ -1,11 +1,6 @@
 {
   "title": "Advanced Techniques",
-  "icon": "🎯",
+  "icon": "rocket",
   "order": 3,
-  "pages": [
-    "agent-architecture",
-    "prompt-engineering",
-    "testing-workflow",
-    "git-integration"
-  ]
+  "pages": ["prompt-engineering"]
 }

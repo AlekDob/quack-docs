@@ -71,7 +71,7 @@ To verify Quack is working correctly:
 3. Ask Claude a question in the chat panel
 4. Check that file explorer shows your project files
 
-If everything works, you're ready to start using Quack! 🎉
+If everything works, you're ready to start using Quack!
 
 ## Troubleshooting
 

@@ -1,10 +1,6 @@
 {
   "title": "Best Practices",
-  "icon": "✨",
+  "icon": "star",
   "order": 4,
-  "pages": [
-    "project-organization",
-    "cost-optimization",
-    "security-tips"
-  ]
+  "pages": ["prompting-patterns"]
 }
