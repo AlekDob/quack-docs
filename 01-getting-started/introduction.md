@@ -4,8 +4,6 @@ Welcome to **Quack** - your multi-agentic IDE powered by Claude Code!
 
 ![Quack Agent](/images/quack-agent.jpeg)
 
----
-
 ## What is Quack?
 
 Quack is a **multi-agentic IDE** built on top of Claude Code that revolutionizes how you work on software projects. Unlike traditional IDEs or AI assistants, Quack allows you to:
@@ -16,8 +14,6 @@ Quack is a **multi-agentic IDE** built on top of Claude Code that revolutionizes
 - Give each agent a **unique personality** and specialized focus
 
 Think of Quack as your **AI development team** - where each agent is a team member with specific expertise, working together on your codebase.
-
----
 
 ## Core Architecture: Droids & Skills
 
@@ -61,8 +57,6 @@ One of Quack's most powerful features is the ability to **teach agents**:
 - Create **custom behaviors** based on your workflow
 - Build specialized agents for your project's needs
 
----
-
 ## Real-Time Agent Monitoring
 
 One of Quack's killer features is the **Agent Panel** - a real-time dashboard that keeps you in control of all your agents:
@@ -82,8 +76,6 @@ Never miss when an agent completes a task! Quack notifies you through multiple c
 - **Telegram Integration** - Get notified on your phone, wherever you are
 
 This means you can **start multiple agents on different tasks**, go grab a coffee, and get pinged the moment any of them needs your attention. True multitasking productivity!
-
----
 
 ## Why Quack?
 
@@ -119,8 +111,6 @@ Droids ensure clean separation:
 - Results are synthesized and returned cleanly
 - Token usage is optimized
 
----
-
 ## Who is Quack For?
 
 **Solo Developers** who want to:
@@ -138,14 +128,10 @@ Droids ensure clean separation:
 - Visual management of multiple agent sessions
 - Advanced customization of agent behaviors
 
----
-
 ## Getting Started
 
 Ready to build your AI development team? Continue to the [Installation Guide](./installation) to set up Quack on your machine.
 
 Or jump to [First Steps](./first-steps) to create your first agent and learn the basics.
-
----
 
 **Next**: [Installation →](./installation)

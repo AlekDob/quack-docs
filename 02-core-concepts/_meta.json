@@ -1,0 +1,8 @@
+{
+  "title": "Core Concepts",
+  "icon": "book",
+  "order": 2,
+  "pages": [
+    { "slug": "side-panel", "title": "Side Panel", "icon": "layout" }
+  ]
+}

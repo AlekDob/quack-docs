@@ -129,36 +129,46 @@ Skills provide domain-specific knowledge:
 
 ## Slash Commands
 
-Quick actions are available via slash commands:
+Slash commands are **custom prompts** you can create and manage. They allow you to define frequently-used prompts that Claude can execute.
 
-**In Chat**:
-- `/feature` - Create a Git Flow feature branch
-- `/commit` - Commit changes with AI-generated message
-- `/code-review` - Review uncommitted changes
-- `/diary` - Log progress and plan next steps
+### Managing Commands
+
+1. Click the **Commands** icon in the right sidebar
+2. Browse your existing project and personal commands
+3. Search commands using the search bar
+4. Click any command to view or edit it
+
+### Creating a Command
+
+1. Open the **Commands** panel in the right sidebar
+2. Click the **+ New Command** button (top right)
+3. Fill in the command details:
+   - **Name**: The command name (e.g., `review`)
+   - **Description**: What the command does
+   - **Content**: The prompt instructions
+4. Save your command
+
+Your new command will be available immediately as `/your-command-name`.
+
+### Example Commands
+
+Here are some useful commands you might create:
+
+- `/review` - Review code for bugs and improvements
+- `/explain` - Explain code in simple terms
+- `/optimize` - Analyze code for performance issues
+- `/document` - Generate documentation for code
 
 Type `/` in the chat to see all available commands.
-
-## Keyboard Shortcuts
-
-Speed up your workflow with keyboard shortcuts:
-
-| Action | macOS | Windows/Linux |
-|--------|-------|---------------|
-| New Terminal | `Cmd + T` | `Ctrl + T` |
-| Close Tab | `Cmd + W` | `Ctrl + W` |
-| Switch Tabs | `Cmd + 1-9` | `Ctrl + 1-9` |
-| Open Settings | `Cmd + ,` | `Ctrl + ,` |
-| Search | `Cmd + F` | `Ctrl + F` |
-| Command Palette | `Cmd + P` | `Ctrl + P` |
 
 ## Next Steps
 
 Now that you're familiar with the basics:
 
+- Explore the [Side Panel](../02-core-concepts/side-panel) in depth
 - Learn [Advanced Techniques](../03-advanced-techniques/prompt-engineering) for better AI interactions
 - Discover [Best Practices](../04-best-practices/prompting-patterns) for power users
 
----
-
 **Previous**: [Installation](./installation)
+
+**Next**: [The Side Panel](../02-core-concepts/side-panel)

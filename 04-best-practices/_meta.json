@@ -1,6 +1,6 @@
 {
   "title": "Best Practices",
-  "icon": "star",
+  "icon": "⭐",
   "order": 4,
   "pages": ["prompting-patterns"]
 }

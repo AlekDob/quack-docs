@@ -41,6 +41,8 @@ Great! Now add custom error classes for:
 Save them in @utils/errors.ts and update routes to use them
 ```
 
+---
+
 ## Pattern 1: Feature Request
 
 **When to use:** Adding new functionality.
@@ -98,6 +100,8 @@ Quality Expectations:
 - Log slow queries (> 1s) for monitoring
 ```
 
+---
+
 ## Pattern 2: Debugging
 
 **When to use:** Fixing bugs or performance issues.
@@ -154,6 +158,8 @@ Please:
 3. Add memory monitoring
 ```
 
+---
+
 ## Pattern 3: Refactoring
 
 **When to use:** Improving existing code.
@@ -208,6 +214,8 @@ Quality:
 - Follow existing error handling pattern
 ```
 
+---
+
 ## Common Pitfalls to Avoid
 
 ### 1. Ambiguity
@@ -229,6 +237,8 @@ Quality:
 
 **Bad**: "Make sure it works"
 **Good**: "Tests pass, response time < 200ms, handles 1000 concurrent uploads"
+
+---
 
 ## Context-Aware Prompting
 
@@ -262,6 +272,8 @@ Use @references when:
 - General project patterns (Claude infers from other files)
 - Standard files (README, package.json)
 
+---
+
 ## Summary
 
 **Key takeaways:**
@@ -272,7 +284,5 @@ Use @references when:
 4. **Chain complex tasks**: Analysis - Implementation - Extension
 5. **Use patterns**: Feature Request, Debugging, Refactoring
 6. **Avoid pitfalls**: Ambiguity, overload, missing constraints
-
----
 
 **Previous**: [Prompt Engineering](../03-advanced-techniques/prompt-engineering)
