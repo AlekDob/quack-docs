@@ -32,30 +32,6 @@ Project context and tools:
 - **Hooks**: Automation triggers for tool events
 - **Sessions**: Previous conversation history
 
-## Opening Your First Terminal
-
-Let's start by opening a terminal:
-
-1. Click the **+** button in the tab bar (or press `Cmd/Ctrl + T`)
-2. A new terminal tab will appear
-3. The terminal starts in your home directory by default
-
-Try running some basic commands:
-
-```bash
-# Check current directory
-pwd
-
-# List files
-ls -la
-
-# Navigate to a project
-cd ~/projects/my-app
-
-# Run a dev server
-npm run dev
-```
-
 ## Having Your First Conversation
 
 Claude is always ready in the Chat tab:
