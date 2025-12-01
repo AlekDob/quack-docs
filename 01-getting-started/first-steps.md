@@ -4,31 +4,33 @@ Now that you have Quack installed, let's explore the basic features and get you 
 
 ## The Quack Interface
 
-Quack is organized into several key areas:
+Quack is organized into three main areas:
 
-### 1. Tab Bar (Top)
-- **Chat Tab**: Main conversation with Claude
-- **Terminal Tabs**: Each open terminal appears as a tab
+### 1. Agents Panel (Left)
+The left sidebar shows your **AI agents**:
+- Each agent can work on one or multiple projects
+- Agents maintain their own conversation history
+- Click an agent to start or resume a conversation
+- Create new agents with the **+** button
+
+### 2. Chat Area (Center)
+The main workspace where you interact with your agent:
+- **Chat Tab**: Conversation with the active agent
+- **Terminal Tabs**: XTerm.js-powered terminals
 - **File Tabs**: Opened files for quick reference
 - **Browser Tabs**: Integrated web browser for localhost apps
+- **Docs Tab**: Built-in documentation viewer
 
-### 2. Sidebar (Left)
-- **Chat**: AI conversation interface
+### 3. Side Panel (Right)
+Project context and tools:
+- **Project Context**: Current agent info, working directory, git branch
 - **File Explorer**: Navigate your project files
-- **Git**: Version control operations
-- **Agents**: Manage available agents
-- **Skills**: Browse and use Claude skills
-- **Commands**: Quick access to slash commands
-
-### 3. Main Content Area
-- **Terminal**: XTerm.js-powered terminal
-- **Editor**: Code viewer (coming soon)
-- **Browser**: Embedded web view for local apps
-
-### 4. Status Bar (Bottom)
-- Connection status
-- Current working directory
-- Active model information
+- **Commands**: Create and manage slash commands
+- **Droids**: Specialized subagents for focused tasks
+- **Skills**: Modular capabilities Claude can use
+- **MCP Servers**: Model Context Protocol integrations
+- **Hooks**: Automation triggers for tool events
+- **Sessions**: Previous conversation history
 
 ## Opening Your First Terminal
 
@@ -109,23 +111,37 @@ Quack supports multiple terminals running simultaneously:
 - Terminal 2: Running `npm test --watch`
 - Terminal 3: Git operations
 
-## Exploring Agents
+## Working with Agents
 
-Agents are specialized AI assistants for specific tasks:
+Agents are your AI assistants in the left panel:
 
-1. Click **Agents** in the sidebar
-2. Browse available agents (git-flow-manager, test-engineer, etc.)
-3. Click an agent to learn what it does
-4. Use agents via chat: `/agent-name task description`
+1. Click an agent in the **left sidebar** to select it
+2. Each agent has its own conversation history
+3. Agents can work on one or multiple projects
+4. Create a new agent with the **+** button at the top
+
+### Agent Features
+- **Color coding**: Each agent has a unique color for easy identification
+- **Project assignment**: Assign agents to specific projects
+- **Persistent memory**: Agents remember context across sessions
+
+## Using Droids
+
+Droids are specialized subagents in the **right sidebar**:
+
+1. Click **Droids** in the Side Panel (right)
+2. Browse available droids (code-reviewer, test-engineer, etc.)
+3. Droids work in isolation and return focused results
+4. Claude automatically invokes droids when appropriate
 
 ## Using Skills
 
-Skills provide domain-specific knowledge:
+Skills are modular capabilities in the **right sidebar**:
 
-1. Click **Skills** in the sidebar
-2. Browse skills (xterm-terminal-expert, tauri-build-expert, etc.)
-3. Click a skill to read its documentation
-4. Skills are automatically available to Claude
+1. Click **Skills** in the Side Panel (right)
+2. Browse available skills
+3. Skills are automatically discovered by Claude
+4. They provide domain-specific knowledge and workflows
 
 ## Slash Commands
 
