@@ -15,13 +15,45 @@ Quack is a **multi-agentic IDE** built on top of Claude Code that revolutionizes
 
 Think of Quack as your **AI development team** - where each agent is a team member with specific expertise, working together on your codebase.
 
-## Core Architecture: Droids & Skills
+## Core Architecture: Agents, Droids & Skills
 
-Quack is built on two fundamental principles:
+Quack is built on a three-tier architecture where **Agents** orchestrate **Droids** and **Skills**:
+
+```
+Agents (Product Managers)
+   │
+   ├── Droids (Specialized Workers)
+   │
+   └── Skills (Modular Capabilities)
+```
+
+### Agents (Your AI Team)
+
+Think of agents as **product managers** or **feature coordinators**. They can be generic or specialized:
+
+- **Each agent can work on one or multiple projects**
+- **Agents maintain their own personality, focus, and conversation history**
+- **You configure which Skills and Droids each agent can use**
+- **Agents are saved in memory** so you can reuse them across sessions
+
+When you create an agent, you define:
+- **Name and Role**: Who is this agent? (e.g., "Laura - Feature Coordinator")
+- **Specialization**: Generic or focused on specific domains
+- **Skills**: Which skills should this agent have access to
+- **Droids**: Which droids can this agent invoke
+- **When to use them**: Conditions for invoking skills and droids
+
+**How it works:**
+- Agent configurations are stored in `.quack/agent-personalities/` as JSON files
+- When you select an agent, Quack injects a personalized header into your `CLAUDE.md`
+- This header contains dynamic variables that adapt Claude's behavior to your agent's personality
+- Each time you switch agents, the `CLAUDE.md` updates automatically
+
+**Important:** If you use an agent across multiple projects, make sure the Skills and Droids you assigned are also available in those projects.
 
 ### Droids (Specialized Subagents)
 
-Droids are **isolated subagents** specialized in specific contexts:
+Droids are **isolated subagents** that handle specific tasks without polluting the main conversation:
 
 - Each Droid works in a **sandboxed environment**
 - They execute specialized tasks and **return only what the main agent needs**
