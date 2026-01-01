@@ -3,6 +3,9 @@
   "icon": "book",
   "order": 2,
   "pages": [
-    { "slug": "side-panel", "title": "Side Panel", "icon": "layout" }
+    { "slug": "side-panel", "title": "Side Panel", "icon": "layout" },
+    { "slug": "kanban-board", "title": "Kanban Board", "icon": "layout-grid" },
+    { "slug": "second-brain", "title": "Second Brain", "icon": "brain" },
+    { "slug": "background-tasks", "title": "Background Tasks", "icon": "clock" }
   ]
 }

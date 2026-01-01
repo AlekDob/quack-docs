@@ -208,6 +208,6 @@ Will the prompt be shared with the team?
 - Basic TypeScript types (if evident from context)
 - Naming conventions (if consistent in project)
 
-**Previous**: [The Side Panel](../02-core-concepts/side-panel)
+**Previous**: [Background Tasks](../02-core-concepts/background-tasks)
 
 **Next**: [Prompting Patterns](../04-best-practices/prompting-patterns)

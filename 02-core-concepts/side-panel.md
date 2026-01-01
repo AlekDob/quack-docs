@@ -267,4 +267,4 @@ The panel shows recent sessions with:
 
 **Previous**: [First Steps](../01-getting-started/first-steps)
 
-**Next**: [Prompt Engineering](../03-advanced-techniques/prompt-engineering)
+**Next**: [Kanban Board](./kanban-board)
