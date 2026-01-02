@@ -2,5 +2,5 @@
   "title": "Best Practices",
   "icon": "⭐",
   "order": 4,
-  "pages": ["prompting-patterns"]
+  "pages": ["prompting-patterns", "project-management-commands"]
 }
