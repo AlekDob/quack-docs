@@ -254,4 +254,4 @@ This is especially useful for long-running AI tasks like code reviews or test ge
 
 **Previous**: [Second Brain](./second-brain)
 
-**Next**: [Prompt Engineering](../03-advanced-techniques/prompt-engineering)
+**Next**: [Task Progress Tracking](./task-progress-tracking)

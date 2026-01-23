@@ -6,6 +6,9 @@
     "side-panel",
     "kanban-board",
     "second-brain",
-    "background-tasks"
+    "background-tasks",
+    "task-progress-tracking",
+    "interactive-questions",
+    "ai-image-generation"
   ]
 }
