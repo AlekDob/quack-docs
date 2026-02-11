@@ -30,29 +30,11 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create PR
-        id: create-pr
+      - name: Commit and push
         if: steps.changes.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.WEBSITEREPOTOKEN }}
-          commit-message: "docs: sync submodule to ${{ env.SUBMODULE_SHA }}"
-          title: "docs: auto-sync documentation"
-          body: |
-            Automated PR to update the docs submodule.
-
-            Updated `docs/guide` to `${{ env.SUBMODULE_SHA }}`.
-
-            Triggered by a push to [quack-docs](https://github.com/AlekDob/quack-docs).
-          branch: docs/auto-sync
-          delete-branch: true
-
-      - name: Auto-merge PR
-        if: steps.create-pr.outputs.pull-request-number
         run: |
-          gh pr merge ${{ steps.create-pr.outputs.pull-request-number }} \
-            --repo AlekDob/quackwebsite \
-            --squash \
-            --auto
-        env:
-          GH_TOKEN: ${{ secrets.WEBSITEREPOTOKEN }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/guide
+          git commit -m "docs: sync submodule to ${{ env.SUBMODULE_SHA }}"
+          git push
