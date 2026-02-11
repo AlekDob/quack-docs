@@ -31,6 +31,7 @@ jobs:
           fi
 
       - name: Create PR
+        id: create-pr
         if: steps.changes.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
@@ -45,3 +46,13 @@ jobs:
             Triggered by a push to [quack-docs](https://github.com/AlekDob/quack-docs).
           branch: docs/auto-sync
           delete-branch: true
+
+      - name: Auto-merge PR
+        if: steps.create-pr.outputs.pull-request-number
+        run: |
+          gh pr merge ${{ steps.create-pr.outputs.pull-request-number }} \
+            --repo AlekDob/quackwebsite \
+            --squash \
+            --auto
+        env:
+          GH_TOKEN: ${{ secrets.WEBSITEREPOTOKEN }}
