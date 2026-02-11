@@ -9,6 +9,8 @@
     "background-tasks",
     "task-progress-tracking",
     "interactive-questions",
-    "ai-image-generation"
+    "ai-image-generation",
+    "project-grouping",
+    "branch-per-session"
   ]
 }
