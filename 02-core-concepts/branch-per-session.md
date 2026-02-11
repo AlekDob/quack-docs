@@ -232,4 +232,4 @@ When using multiple branches, include the branch context in your session title:
 
 **Previous**: [Project Grouping](./project-grouping)
 
-**Next**: [Codebase Map](../03-advanced-techniques/codebase-map)
+**Next**: [Prompt Engineering](../03-advanced-techniques/prompt-engineering)

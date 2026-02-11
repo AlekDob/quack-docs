@@ -197,6 +197,6 @@ git branch -d feature/auth
 
 ---
 
-**Previous**: [Codebase Map](./codebase-map)
+**Previous**: [Prompt Engineering](./prompt-engineering)
 
 **Next**: [Project Management Commands](../04-best-practices/project-management-commands)
