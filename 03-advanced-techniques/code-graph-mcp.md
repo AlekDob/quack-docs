@@ -36,34 +36,45 @@ This is how the [Medium article](https://medium.com/@me_82386/i-cut-my-claude-co
 
 ## Installation
 
-### Prerequisites
+There are two parts: installing the Python package on your system, and configuring Quack to use it.
 
-- Python 3.12 or higher
-- pipx (recommended) or pip
+### Part 1: Install the Python Package
 
-### Step 1: Install the Package
+Code Graph MCP requires Python 3.12+. Install it with pipx (recommended):
 
 ```bash
 # Install pipx if you don't have it
 brew install pipx
 pipx ensurepath
 
-# Install code-graph-mcp with Python 3.12
+# If you don't have Python 3.12+, install it first
+brew install python@3.12
+
+# Install code-graph-mcp
 pipx install --python python3.12 code-graph-mcp
 ```
 
-### Step 2: Find the Absolute Path
-
-Tauri apps don't always inherit your shell PATH, so you need the absolute path:
+Find the absolute path (needed for Quack configuration):
 
 ```bash
 which code-graph-mcp
 # Example output: /Users/yourname/.local/bin/code-graph-mcp
 ```
 
-### Step 3: Configure in Quack
+### Part 2: Configure in Quack (Two Options)
 
-Open the MCP panel in Quack, click "Edit JSON" > "Global .mcp.json", and add:
+**Option A: Install from Quack Store (Recommended)**
+
+1. Open the Quack Store (sidebar)
+2. Go to the "MCP Servers" category
+3. Find "Code Graph MCP" and click Install
+4. Choose "Global" when prompted for scope
+
+This automatically:
+- Adds the server to your `~/.mcp.json`
+- Installs the `use-code-graph` rule in `~/.claude/rules/` (tells agents to use Code Graph tools)
+
+After installing from the Store, open "Edit JSON" > "Global .mcp.json" and replace the command with your absolute path from Part 1:
 
 ```json
 {
@@ -76,22 +87,29 @@ Open the MCP panel in Quack, click "Edit JSON" > "Global .mcp.json", and add:
 }
 ```
 
-Replace `/Users/yourname/.local/bin/code-graph-mcp` with your actual path from Step 2.
+**Option B: Manual Configuration**
 
-### Step 4: Verify
+Open the MCP panel, click "Edit JSON" > "Global .mcp.json", and add the config above manually. Then copy the rule file from the [Quack Marketplace repo](https://github.com/AlekDob/quack-marketplace/blob/main/plugins/code-graph-mcp/rules/use-code-graph.md) to `~/.claude/rules/use-code-graph.md`.
 
-After saving, the MCP panel should show `code-graph-mcp` with a green "Running" status under Global Servers.
+### Verify
+
+After configuration, the MCP panel should show `code-graph-mcp` with a green "Running" status under Global Servers.
 
 ## How Agents Use It
 
-Once installed, agents automatically use Code Graph MCP when the `use-code-graph` rule is active (installed from the Quack Store). The rule instructs agents to:
+Once installed, agents **automatically** use Code Graph MCP in every session. No need to ask them. This works because:
 
-1. Use `find_definition` instead of Grep when looking for where something is defined
-2. Use `find_references` before modifying a function to check impact
-3. Use `dependency_analysis` to understand module relationships
-4. Use `complexity_analysis` to identify refactoring targets
+1. The `use-code-graph` rule in `~/.claude/rules/` is loaded at the start of every Claude Code session
+2. The rule instructs agents to prefer Code Graph tools over manual Glob/Grep searches
+3. The MCP server runs in the background, providing tools like `find_definition`, `find_references`, etc.
 
-You don't need to do anything special -- agents will prefer Code Graph queries over manual file searches whenever the tools are available.
+Agents will:
+- Use `find_definition` instead of Grep when looking for where something is defined
+- Use `find_references` before modifying a function to check impact
+- Use `dependency_analysis` to understand module relationships
+- Use `complexity_analysis` to identify refactoring targets
+
+You don't need to do anything special -- it just works.
 
 ## Language Support
 
