@@ -11,6 +11,7 @@
     "interactive-questions",
     "ai-image-generation",
     "project-grouping",
-    "branch-per-session"
+    "branch-per-session",
+    "delegation-rule"
   ]
 }
