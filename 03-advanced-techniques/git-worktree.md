@@ -197,6 +197,6 @@ git branch -d feature/auth
 
 ---
 
-**Previous**: [Prompt Engineering](./prompt-engineering)
+**Previous**: [Code Graph MCP](./code-graph-mcp)
 
 **Next**: [Project Management Commands](../04-best-practices/project-management-commands)
