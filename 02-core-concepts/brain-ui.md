@@ -25,6 +25,8 @@ Click any entry to open it in the **Editor** panel on the right.
 - **Human**: Shows guide pages written for human readers
 - **All**: Shows everything
 
+![Brain Knowledge sidebar and Editor view — Human Guides with markdown rendering, tables, and dark theme](/images/screenshots/brain-editor-knowledge.png)
+
 ### 2. Editor (Content Viewer)
 
 When you click an entry in the sidebar, it opens in the editor panel. The editor renders:
@@ -54,6 +56,8 @@ The graph view shows your knowledge entries as an **interactive node map**. Each
 | Gray | Notes |
 
 Click any node to open that entry in the editor.
+
+![Knowledge Graph — interactive node map with color-coded entries and cluster visualization](/images/screenshots/brain-graph-view.png)
 
 The graph helps you visualize the **density and distribution** of your knowledge — a project heavy on bug fixes might need better architecture, while one with many patterns is well-documented.
 

@@ -4,6 +4,8 @@ The Timeline is the **activity feed** of your Second Brain. It shows everything 
 
 Think of it as your project's commit history, but for *knowledge* instead of code.
 
+![Timeline view — search field, type filters, diary entries with timestamps and author attribution](/images/screenshots/brain-timeline-view.png)
+
 ## What You See
 
 The Timeline displays events grouped by date:
