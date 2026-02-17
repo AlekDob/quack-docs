@@ -1,138 +1,142 @@
-# Brain dallo Store: guida rapida
+# Brain Store Setup
 
-Il Second Brain di Quack funziona grazie a un set di plugin installabili dal **Quack Store**. Questa pagina ti spiega quali sono, cosa fanno, e come metterli insieme in pochi minuti.
+The Second Brain in Quack is powered by a set of plugins you can install from the **Quack Store** (Marketplace). This page explains which plugins are available, what they do, and how to set them up in minutes.
 
-Pensa allo Store come a un negozio di app per i tuoi agenti AI. Alcune "app" insegnano all'agente come comportarsi (sono le **Rules**), altre gli danno competenze specifiche (le **Skills**), e altre ancora sono agenti specializzati pronti all'uso (i **Droids**).
+Think of the Store as an app store for your AI agents. Some "apps" teach the agent how to behave (**Rules**), others give it specific capabilities (**Skills**), and others are ready-to-use specialized agents (**Droids**).
 
-## I 4 plugin del Brain
+## The 4 Brain Plugins
 
-Aprendo il Quack Store e cercando "Brain" trovi 4 item principali:
+Open the Quack Store and search for "Brain" to find these four items:
 
-| Nome | Tipo | Cosa fa |
-|------|------|---------|
-| **Quack Brain** | Skill | Il cuore del sistema — insegna all'agente a leggere e scrivere nel Brain |
-| **Use Quack Brain** | Rule | Il promemoria automatico — ricorda all'agente di usare il Brain in ogni sessione |
-| **Brain Migrate** | Skill | L'assistente al trasloco — converte documentazione sparsa nel formato Brain v2 |
-| **Quack Brain Manager** | Droid | Il bibliotecario — mantiene la knowledge base ordinata nel tempo |
+| Name | Type | What it does |
+|------|------|--------------|
+| **Quack Brain** | Skill | The core engine — teaches the agent to read and write to the Brain |
+| **Use Quack Brain** | Rule | The automatic reminder — tells the agent to use the Brain in every session |
+| **Brain Migrate** | Skill | The moving assistant — converts scattered docs into Brain v2 format |
+| **Quack Brain Manager** | Droid | The librarian — keeps the knowledge base tidy over time |
 
-Vediamoli uno per uno.
+![Quack Store showing Brain-related plugins — Skill, Rule, and Droid types](/images/screenshots/quack-brain.jpeg)
+
+Let's look at each one.
 
 ---
 
 ## Quack Brain (Skill)
 
-Questa e' la skill fondamentale. Senza di lei, l'agente non sa ne' dove cercare ne' come salvare le conoscenze.
+This is the core skill. Without it, the agent has no idea where to search or how to save knowledge.
 
-Installando **Quack Brain** insegni all'agente:
+Installing **Quack Brain** teaches the agent:
 
-- La struttura a due livelli (`documentation/` nel progetto + `~/.quack/brain/` globale)
-- Il formato YAML obbligatorio per ogni file di conoscenza
-- Come leggere, scrivere e cercare entry nel Brain
-- Come scrivere i diary entry (il changelog giornaliero del progetto)
-- Come usare le frecce di breadcrumb nel codice (`// Brain: slug`) per collegare codice e documentazione
-- Come creare diagrammi Mermaid
+- The two-level architecture (`documentation/` in the project + `~/.quack/brain/` global)
+- The mandatory YAML frontmatter format for every knowledge file
+- How to read, write, and search entries in the Brain
+- How to write diary entries (the project's daily changelog)
+- How to use breadcrumb comments in code (`// Brain: slug`) to link code and documentation
+- How to create Mermaid diagrams
 
 :::callout[info]
-Se installi solo un plugin, questo e' quello giusto. E' il fondamento su cui si appoggiano tutti gli altri.
+If you install only one plugin, this is the one. It's the foundation everything else builds on.
 :::
 
 ---
 
 ## Use Quack Brain (Rule)
 
-Una Rule e' diversa da una Skill. Non insegna all'agente un'abilita' tecnica, ma gli dice **come comportarsi**.
+A Rule is different from a Skill. It doesn't teach the agent a technical capability — it tells the agent **how to behave**.
 
-**Use Quack Brain** e' il promemoria automatico che si attiva all'inizio di ogni sessione. Dice all'agente:
+**Use Quack Brain** is the automatic reminder that activates at the start of every session. It tells the agent:
 
-- Prima di fare qualsiasi cosa, cerca nel Brain se esiste gia' una soluzione
-- Dopo aver scoperto qualcosa di utile, salvalo nel Brain
-- Rispetta sempre il formato YAML (senza frontmatter, il Brain UI non mostra i file)
+- Before doing anything, search the Brain for existing solutions
+- After discovering something useful, save it to the Brain
+- Always respect the YAML frontmatter format (without it, the Brain UI won't display the file)
 
 :::callout[warning]
-La Rule non e' infallibile al 100%. A volte l'agente dimentica di seguirla, specialmente in sessioni molto lunghe o su task complessi. Ma copre la stragrande maggioranza dei casi e vale sempre la pena averla attiva.
+The Rule isn't 100% infallible. Occasionally the agent may forget to follow it, especially in very long sessions or complex tasks. But it covers the vast majority of cases and is always worth having active.
 :::
 
-Senza questa Rule, l'agente conosce il Brain (grazie alla Skill) ma potrebbe non usarlo in modo sistematico. Con la Rule, il comportamento diventa un'abitudine automatica.
+Without this Rule, the agent knows the Brain exists (thanks to the Skill) but might not use it consistently. With the Rule, the behavior becomes an automatic habit.
 
 ---
 
 ## Brain Migrate (Skill)
 
-Hai un progetto con documentazione sparsa? File `.md` in giro per il repo, una cartella `.quack/brain/` dal vecchio formato, oppure docs in `.claude/docs/`?
+Have a project with scattered documentation? Random `.md` files across the repo, a `.quack/brain/` folder from the old format, or docs in `.claude/docs/`?
 
-**Brain Migrate** e' la skill che fa il trasloco. Scansiona tutte le posizioni note, classifica ogni file (bug fix, pattern, decisione, gotcha, diary...) e li sposta nella struttura corretta `documentation/`.
+**Brain Migrate** handles the move. It scans all known locations, classifies each file (bug fix, pattern, decision, gotcha, diary...) and places them in the correct `documentation/` structure.
 
-Il processo e' in 6 step e ti mostra un piano completo prima di toccare qualsiasi file. Nulla si sposta senza la tua approvazione.
+The process runs in 6 steps and shows you a complete plan before touching any file. Nothing moves without your approval.
 
 :::callout[info]
-Se stai partendo da zero con un progetto nuovo, non hai bisogno di Brain Migrate. E' pensata per chi ha gia' della documentazione e vuole portarla nel formato v2.
+If you're starting fresh with a new project, you don't need Brain Migrate. It's designed for projects that already have existing documentation to reorganize.
 :::
 
-Per tutti i dettagli sul processo di migrazione, vedi [Brain Migration](./brain-migration).
+For full migration details, see [Brain Migration](./brain-migration).
 
 ---
 
 ## Quack Brain Manager (Droid)
 
-Un Droid e' un agente specializzato che puoi chiamare su richiesta. Non e' attivo in automatico come una Rule — lo invochi tu quando ne hai bisogno.
+A Droid is a specialized agent you invoke on demand. It's not always-on like a Rule — you call it when needed.
 
-**Quack Brain Manager** e' il bibliotecario del tuo Brain. Lo usi per:
+**Quack Brain Manager** is the librarian for your Brain. Use it to:
 
-- Riorganizzare entry che si sono accumulate in modo caotico
-- Trovare duplicati e consolidarli
-- Aggiornare entry obsolete
-- Fare una "pulizia di primavera" della knowledge base
+- Reorganize entries that have accumulated chaotically
+- Find and consolidate duplicates
+- Update outdated entries
+- Perform a "spring cleaning" of the knowledge base
 
-E' un plugin opzionale, utile soprattutto su progetti maturi con molte entry accumulate nel tempo.
+It's an optional plugin, most useful on mature projects with many entries accumulated over time.
 
 ---
 
-## Setup raccomandato
+## Recommended Setup
 
-Ecco le tre configurazioni piu' comuni, dal minimo indispensabile all'avanzato.
+Here are the three most common configurations, from bare minimum to advanced.
 
 :::steps
-1. **Setup minimo** — Installa **Quack Brain** (Skill) + **Use Quack Brain** (Rule). Questo e' tutto quello che ti serve per iniziare. L'agente sa come usare il Brain e ha il promemoria automatico attivo.
+1. **Minimal setup** — Install **Quack Brain** (Skill) + **Use Quack Brain** (Rule). This is all you need to get started. The agent knows how to use the Brain and has the automatic reminder active.
 
-2. **Setup per progetti esistenti** — Aggiungi **Brain Migrate** (Skill) se hai gia' documentazione da organizzare. Eseguila una volta, poi puoi anche disinstallarla se non ti serve piu'.
+2. **Existing project setup** — Add **Brain Migrate** (Skill) if you already have documentation to organize. Run it once, then you can uninstall it if you don't need it anymore.
 
-3. **Setup avanzato** — Aggiungi **Quack Brain Manager** (Droid) se vuoi manutenzione periodica della knowledge base senza farlo a mano.
+3. **Advanced setup** — Add **Quack Brain Manager** (Droid) if you want periodic knowledge base maintenance without doing it manually.
 :::
 
 ---
 
-## Come installare i plugin
+## How to Install the Plugins
 
 :::steps
-1. Apri il **Quack Store** dall'interfaccia principale (puoi trovarlo nella barra laterale o nelle impostazioni dell'agente)
+1. Open the **Quack Store** from the sidebar (Marketplace icon)
 
-2. Cerca **"Brain"** nella barra di ricerca
+2. Search for **"Brain"** in the search bar
 
-3. Clicca su ciascun plugin che vuoi installare, poi clicca **Install**
+3. Click on each plugin you want, then click **Install**
 
-4. Assegna le Rules e le Skills all'agente dal pannello laterale (vedi [Side Panel](./side-panel) per i dettagli)
+4. Assign Rules and Skills to your agent from the side panel (see [Side Panel](./side-panel) for details)
 
-5. Inizia una nuova sessione — i plugin sono attivi subito
+5. Start a new session — the plugins are active immediately
 :::
 
 :::callout[info]
-Quando installi una **Rule**, ricordati di assegnarla esplicitamente all'agente. Le Rules non si attivano da sole se non le assegni. Le Skills, invece, vengono usate dall'agente quando servono una volta che sono installate.
+When you install a **Rule**, remember to explicitly assign it to your agent. Rules don't activate on their own unless assigned. Skills, on the other hand, are used automatically by the agent when needed once installed.
 :::
 
 ---
 
-## Come funzionano insieme
+## How They Work Together
 
-Se li hai tutti e tre attivi, il flusso tipico di una sessione e' questo:
+With all three active, a typical session flow looks like this:
 
-1. L'agente parte, legge **Use Quack Brain** (Rule) e sa che deve cercare prima di agire
-2. Usa **Quack Brain** (Skill) per sapere dove cercare e come interpretare i file trovati
-3. Lavora sul tuo task
-4. Prima di chiudere, usa di nuovo **Quack Brain** per salvare eventuali scoperte
-5. Se convochi **Quack Brain Manager** (Droid), lui si occupa di tenere tutto ordinato
+1. The agent starts and reads **Use Quack Brain** (Rule), knowing it must search before acting
+2. Uses **Quack Brain** (Skill) to know where to search and how to interpret the files it finds
+3. Works on your task
+4. Before finishing, uses **Quack Brain** again to save any discoveries
+5. If you invoke **Quack Brain Manager** (Droid), it takes care of keeping everything organized
+
+![Brain Timeline showing diary entries, knowledge types, and multi-author tracking](/images/screenshots/brain-timeline-view.png)
 
 ---
 
-**Prossimo**: [Background Tasks](./background-tasks) — Esegui operazioni lunghe senza bloccare l'interfaccia
+**Next**: [Background Tasks](./background-tasks) — Run long operations without blocking the interface
 
-**Precedente**: [Brain Migration](./brain-migration) — Migra la tua documentazione esistente nel formato Brain v2
+**Previous**: [Brain Migration](./brain-migration) — Migrate existing documentation into Brain v2 format

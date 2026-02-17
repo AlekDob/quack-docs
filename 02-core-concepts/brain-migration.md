@@ -166,6 +166,6 @@ A: The Brain UI works with both old and new structures. But migrating gives you 
 
 ---
 
-**Next**: [Brain Store Setup](./brain-store-setup) — Installa i plugin Brain dal Quack Store
+**Next**: [Brain Store Setup](./brain-store-setup) — Install the Brain plugins from the Quack Store
 
 **Previous**: [Brain Timeline](./brain-timeline) — Activity feed with search and multi-user tracking
