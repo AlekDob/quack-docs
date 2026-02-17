@@ -15,7 +15,7 @@ Open the Quack Store and search for "Brain" to find these four items:
 | **Brain Migrate** | Skill | The moving assistant — converts scattered docs into Brain v2 format |
 | **Quack Brain Manager** | Droid | The librarian — keeps the knowledge base tidy over time |
 
-![Quack Store showing Brain-related plugins — Skill, Rule, and Droid types](/images/screenshots/quack-brain.jpeg)
+![Quack Store Discover page — searching "Brain" shows all available Brain plugins with Verified and Installed badges](/images/screenshots/brain-store-discover.png)
 
 Let's look at each one.
 
@@ -106,7 +106,9 @@ Here are the three most common configurations, from bare minimum to advanced.
 ## How to Install the Plugins
 
 :::steps
-1. Open the **Quack Store** from the sidebar (Marketplace icon)
+1. Open the **Quack Store** from the sidebar (Marketplace icon) — you'll find it as a tab in the top bar
+
+![The Quack Store tab in the top navigation bar, accessible from any project](/images/screenshots/brain-store-tab.png)
 
 2. Search for **"Brain"** in the search bar
 
@@ -133,7 +135,11 @@ With all three active, a typical session flow looks like this:
 4. Before finishing, uses **Quack Brain** again to save any discoveries
 5. If you invoke **Quack Brain Manager** (Droid), it takes care of keeping everything organized
 
-![Brain Timeline showing diary entries, knowledge types, and multi-author tracking](/images/screenshots/brain-timeline-view.png)
+![An agent completing documentation tasks — gotchas, patterns, and diary entries created automatically](/images/screenshots/brain-agent-docs.png)
+
+You can also ask the agent explicitly to update the Brain at the end of a session:
+
+![Prompting the agent to update the Brain with session discoveries](/images/screenshots/brain-update-prompt.png)
 
 ---
 
