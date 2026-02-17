@@ -1,5 +1,3 @@
-# Code Graph MCP
-
 Code Graph MCP is an AST-powered code intelligence server that gives your AI agents deep understanding of your codebase structure. Instead of scanning flat file lists, it builds a real code graph with definitions, references, call chains, and complexity metrics.
 
 ## What It Does

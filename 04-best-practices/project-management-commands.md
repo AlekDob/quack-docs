@@ -1,5 +1,3 @@
-# Project Management with Slash Commands
-
 Quack provides a powerful project management system through four global slash commands that integrate with the Kanban board and AI droids.
 
 ---

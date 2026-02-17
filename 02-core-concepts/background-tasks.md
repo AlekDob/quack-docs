@@ -1,5 +1,3 @@
-# Background Tasks
-
 Background Tasks allow you to run long-running operations without blocking your main workflow. Whether you're running builds, tests, or AI agents, background tasks keep Quack responsive while work happens in the background.
 
 ## Why Use Background Tasks?

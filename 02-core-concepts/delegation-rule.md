@@ -1,5 +1,3 @@
-# Delegation Decision Rule
-
 Quack agents follow a structured decision tree to determine the right level of delegation before implementing any task. This prevents both under-delegation (doing everything solo) and over-delegation (spawning teams for trivial work).
 
 ## The Three Levels

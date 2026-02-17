@@ -1,5 +1,3 @@
-# Second Brain
-
 Quack's Second Brain is a **two-level, file-based knowledge store** that helps your AI agents learn, remember, and recall. Every pattern discovered, bug fixed, and decision made gets saved as a simple markdown file — no database, no complexity, no vendor lock-in.
 
 ## Why a Second Brain?

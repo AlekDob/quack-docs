@@ -1,5 +1,3 @@
-# Installation
-
 Learn how to install and set up Quack on your machine.
 
 ## System Requirements

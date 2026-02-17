@@ -1,5 +1,3 @@
-# Agent Browser Overview
-
 Agent Browser is a fast, AI-optimized browser automation CLI built on Playwright. It enables Quack agents to interact with websites programmatically — navigate pages, fill forms, click buttons, take screenshots, and extract data.
 
 ## What It Is

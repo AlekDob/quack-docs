@@ -1,5 +1,3 @@
-# AI Image Generation
-
 AI Image Generation brings visual creativity directly into your workflow. With the `openai image gen` skill, agents can generate custom images, illustrations, and graphics using OpenAI's DALL-E model - perfect for landing pages, marketing materials, documentation, or any project that needs visual assets.
 
 ## Overview

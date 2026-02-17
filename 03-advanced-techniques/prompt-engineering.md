@@ -1,5 +1,3 @@
-# Prompt Engineering
-
 Master the art of writing effective prompts that generate quality code and precise responses.
 
 ## Why Prompt Engineering Matters

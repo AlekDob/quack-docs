@@ -1,5 +1,3 @@
-# Task Progress Tracking
-
 The Task Progress Bar gives you real-time visibility into your agent's work. Located in the status bar at the bottom of Quack, it shows exactly where you stand in any multi-step task - no more wondering how much is left or if the agent is still working.
 
 ## How It Works

@@ -1,5 +1,3 @@
-# Brain UI
-
 The Brain UI is a **dedicated window** for browsing, reading, and navigating your Second Brain knowledge. Think of it as your project's Wikipedia — but written by your AI agents, organized automatically, and rendered beautifully with dark theme support.
 
 ## Opening the Brain Window

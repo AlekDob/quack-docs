@@ -1,5 +1,3 @@
-# Project Grouping
-
 Project Grouping lets you link related projects together so your AI agents know about sibling projects. When projects are grouped, each project's CLAUDE.md is automatically updated with cross-project context, and the sidebar shows them visually connected.
 
 ## Why Use Project Grouping?

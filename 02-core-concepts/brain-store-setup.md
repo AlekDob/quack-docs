@@ -1,5 +1,3 @@
-# Brain Store Setup
-
 The Second Brain in Quack is powered by a set of plugins you can install from the **Quack Store** (Marketplace). This page explains which plugins are available, what they do, and how to set them up in minutes.
 
 Think of the Store as an app store for your AI agents. Some "apps" teach the agent how to behave (**Rules**), others give it specific capabilities (**Skills**), and others are ready-to-use specialized agents (**Droids**).

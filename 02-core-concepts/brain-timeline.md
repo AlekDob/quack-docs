@@ -1,5 +1,3 @@
-# Brain Timeline
-
 The Timeline is the **activity feed** of your Second Brain. It shows everything that's happened on your project in reverse chronological order — diary entries, bug fixes, architecture decisions, new patterns, and more.
 
 Think of it as your project's commit history, but for *knowledge* instead of code.

@@ -1,5 +1,3 @@
-# Git Worktree Isolation
-
 Git worktrees let you work on multiple branches simultaneously without switching your main repository. Each worktree is a separate directory with its own working tree, sharing the same git history as the main repo. In Quack, worktrees are created per session, giving each AI agent session its own isolated workspace.
 
 ## Why Use Worktrees?

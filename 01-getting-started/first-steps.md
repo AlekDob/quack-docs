@@ -1,5 +1,3 @@
-# First Steps with Quack
-
 Now that you have Quack installed, let's explore the basic features and get you productive quickly.
 
 ## The Quack Interface

@@ -1,5 +1,3 @@
-# Brain Migration
-
 If you've been using Quack for a while, you might have knowledge scattered across different locations — the old `~/.quack/brain/` folder, loose markdown files in your project root, or docs in `.claude/docs/`. The **Brain Migrate** skill consolidates everything into the new Brain v2 structure automatically.
 
 ## Do I Need to Migrate?

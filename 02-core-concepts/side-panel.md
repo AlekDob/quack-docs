@@ -1,5 +1,3 @@
-# The Side Panel
-
 The Side Panel is your command center in Quack. Located on the right side of the interface, it provides quick access to all the tools and information you need while working with AI agents.
 
 ## Overview

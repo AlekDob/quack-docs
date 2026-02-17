@@ -1,5 +1,3 @@
-# Branch per Session
-
 Branch per Session moves git branch management from the agent level to the session level. Instead of an agent being locked to one branch, each session can work on its own branch independently.
 
 ## Why Branch per Session?

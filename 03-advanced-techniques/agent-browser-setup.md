@@ -1,5 +1,3 @@
-# Agent Browser Setup
-
 This guide walks you through installing agent-browser and configuring it for use with Cloudflare-protected sites like Medium.
 
 ## Prerequisites

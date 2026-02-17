@@ -1,5 +1,3 @@
-# Prompting Patterns
-
 Proven patterns for common scenarios you'll encounter frequently.
 
 ## Building Contextual Chains

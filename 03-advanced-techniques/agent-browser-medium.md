@@ -1,5 +1,3 @@
-# Publishing to Medium with Agent Browser
-
 This guide shows you how to use agent-browser to publish article drafts directly to Medium from Quack agents.
 
 ## Overview

@@ -1,5 +1,3 @@
-# Kanban Board
-
 The Kanban Board is a visual task management system that helps you organize and track AI-assisted work across multiple projects. It provides an intuitive drag-and-drop interface for managing tasks through their lifecycle.
 
 ## Opening the Kanban Board

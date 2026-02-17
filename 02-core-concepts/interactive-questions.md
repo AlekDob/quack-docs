@@ -1,5 +1,3 @@
-# Interactive Questions
-
 Interactive Questions let AI agents pause and ask you for clarification when they encounter ambiguous situations. Instead of guessing or making assumptions, the agent presents you with clear choices, waits for your answer, and continues with full context.
 
 ## Why Interactive Questions Matter

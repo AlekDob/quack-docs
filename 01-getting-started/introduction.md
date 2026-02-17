@@ -1,5 +1,3 @@
-# Introduction to Quack
-
 Welcome to **Quack** - your multi-agentic IDE powered by Claude Code!
 
 
