@@ -9,6 +9,7 @@
     "brain-ui",
     "brain-timeline",
     "brain-migration",
+    "brain-store-setup",
     "background-tasks",
     "task-progress-tracking",
     "interactive-questions",

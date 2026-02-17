@@ -252,6 +252,6 @@ This is especially useful for long-running AI tasks like code reviews or test ge
 
 ---
 
-**Previous**: [Second Brain](./second-brain)
+**Previous**: [Brain Store Setup](./brain-store-setup) — Installa i plugin Brain dal Quack Store
 
 **Next**: [Task Progress Tracking](./task-progress-tracking)
