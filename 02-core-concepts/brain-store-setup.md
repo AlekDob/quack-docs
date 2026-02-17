@@ -32,9 +32,7 @@ Installing **Quack Brain** teaches the agent:
 - How to use breadcrumb comments in code (`// Brain: slug`) to link code and documentation
 - How to create Mermaid diagrams
 
-:::callout[info]
-If you install only one plugin, this is the one. It's the foundation everything else builds on.
-:::
+> **Note:** If you install only one plugin, this is the one. It's the foundation everything else builds on.
 
 ---
 
@@ -48,9 +46,7 @@ A Rule is different from a Skill. It doesn't teach the agent a technical capabil
 - After discovering something useful, save it to the Brain
 - Always respect the YAML frontmatter format (without it, the Brain UI won't display the file)
 
-:::callout[warning]
-The Rule isn't 100% infallible. Occasionally the agent may forget to follow it, especially in very long sessions or complex tasks. But it covers the vast majority of cases and is always worth having active.
-:::
+> **Warning:** The Rule isn't 100% infallible. Occasionally the agent may forget to follow it, especially in very long sessions or complex tasks. But it covers the vast majority of cases and is always worth having active.
 
 Without this Rule, the agent knows the Brain exists (thanks to the Skill) but might not use it consistently. With the Rule, the behavior becomes an automatic habit.
 
@@ -64,9 +60,7 @@ Have a project with scattered documentation? Random `.md` files across the repo,
 
 The process runs in 6 steps and shows you a complete plan before touching any file. Nothing moves without your approval.
 
-:::callout[info]
-If you're starting fresh with a new project, you don't need Brain Migrate. It's designed for projects that already have existing documentation to reorganize.
-:::
+> **Note:** If you're starting fresh with a new project, you don't need Brain Migrate. It's designed for projects that already have existing documentation to reorganize.
 
 For full migration details, see [Brain Migration](./brain-migration).
 
@@ -91,19 +85,16 @@ It's an optional plugin, most useful on mature projects with many entries accumu
 
 Here are the three most common configurations, from bare minimum to advanced.
 
-:::steps
 1. **Minimal setup** — Install **Quack Brain** (Skill) + **Use Quack Brain** (Rule). This is all you need to get started. The agent knows how to use the Brain and has the automatic reminder active.
 
 2. **Existing project setup** — Add **Brain Migrate** (Skill) if you already have documentation to organize. Run it once, then you can uninstall it if you don't need it anymore.
 
 3. **Advanced setup** — Add **Quack Brain Manager** (Droid) if you want periodic knowledge base maintenance without doing it manually.
-:::
 
 ---
 
 ## How to Install the Plugins
 
-:::steps
 1. Open the **Quack Store** from the sidebar (Marketplace icon) — you'll find it as a tab in the top bar
 
 ![The Quack Store tab in the top navigation bar, accessible from any project](/images/screenshots/brain-store-tab.png)
@@ -115,11 +106,8 @@ Here are the three most common configurations, from bare minimum to advanced.
 4. Assign Rules and Skills to your agent from the side panel (see [Side Panel](./side-panel) for details)
 
 5. Start a new session — the plugins are active immediately
-:::
 
-:::callout[info]
-When you install a **Rule**, remember to explicitly assign it to your agent. Rules don't activate on their own unless assigned. Skills, on the other hand, are used automatically by the agent when needed once installed.
-:::
+> **Note:** When you install a **Rule**, remember to explicitly assign it to your agent. Rules don't activate on their own unless assigned. Skills, on the other hand, are used automatically by the agent when needed once installed.
 
 ---
 

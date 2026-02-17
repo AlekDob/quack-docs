@@ -4,9 +4,7 @@ This guide shows you how to use agent-browser to publish article drafts directly
 
 The `medium-writer` skill automates the process of publishing text content to Medium as a draft. After an agent writes an article (typically saved in your Obsidian vault), it can push the content to Medium for review and final publishing.
 
-:::callout[info]
-Agent Browser publishes drafts only. You'll review, add images, and publish manually via Medium's interface.
-:::
+> **Note:** Agent Browser publishes drafts only. You'll review, add images, and publish manually via Medium's interface.
 
 ## Prerequisites
 
@@ -68,9 +66,7 @@ document.execCommand('insertText', false, 'Your Article Title Here');
 
 Replace `'Your Article Title Here'` with the actual title.
 
-:::callout[warning]
-Never use the `fill` or `type` commands on Medium's editor. They cause "Something is wrong" save errors. Always use `eval` with `document.execCommand('insertText')`.
-:::
+> **Warning:** Never use the `fill` or `type` commands on Medium's editor. They cause "Something is wrong" save errors. Always use `eval` with `document.execCommand('insertText')`.
 
 ### Step 3: Insert Body Paragraphs
 
@@ -116,9 +112,7 @@ agent-browser --cdp 9222 eval "document.execCommand('insertText', false, 'I am A
 
 Then select the text and press `Cmd+I` (macOS) or `Ctrl+I` (Windows) to italicize.
 
-:::callout[info]
-Inline formatting (bold, italic, links) is easier to add manually during review. Agent Browser can insert plain text, and you can format it in Medium's editor before publishing.
-:::
+> **Note:** Inline formatting (bold, italic, links) is easier to add manually during review. Agent Browser can insert plain text, and you can format it in Medium's editor before publishing.
 
 ### Step 6: Verify and Save
 
