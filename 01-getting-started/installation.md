@@ -1,5 +1,70 @@
 Learn how to install and set up Quack on your machine.
 
+## Before You Start
+
+Quack is built on top of **Claude Code**, Anthropic's AI coding agent. Before installing Quack, you need to set up three things: Node.js, an Anthropic account with an active subscription, and the Claude Code CLI.
+
+### 1. Install Node.js
+
+Quack requires **Node.js 22 or later**. The easiest way to install it is from the official website.
+
+Go to [nodejs.org](https://nodejs.org) and download the **LTS (Long Term Support)** version.
+
+**macOS**:
+1. Download the macOS installer (`.pkg` file) from [nodejs.org](https://nodejs.org)
+2. Open the downloaded file and follow the installation wizard
+3. Verify the installation by opening a terminal and running:
+   ```bash
+   node --version
+   npm --version
+   ```
+
+**Windows**:
+1. Download the Windows installer (`.msi` file) from [nodejs.org](https://nodejs.org)
+2. Run the installer and follow the setup steps (leave all default options checked)
+3. Open Command Prompt or PowerShell and verify:
+   ```bash
+   node --version
+   npm --version
+   ```
+
+Both commands should print a version number. If they do, Node.js is ready.
+
+### 2. Get an Anthropic Subscription
+
+Quack uses Claude Code under the hood, which requires a **Claude Pro or Team plan** from Anthropic.
+
+:::callout[info]
+A free Anthropic account is not sufficient to run Claude Code. You need an active **Pro** or **Team** subscription.
+:::
+
+1. Go to [console.anthropic.com](https://console.anthropic.com)
+2. Create an account or sign in
+3. Subscribe to the **Pro** or **Team** plan
+4. Once subscribed, you are ready to authenticate Claude Code in the next step
+
+### 3. Install and Authenticate Claude Code CLI
+
+Claude Code is the CLI that Quack uses to run AI agents. Install it globally with npm:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+After installation, authenticate with your Anthropic account:
+
+```bash
+claude login
+```
+
+This opens a browser window where you log in with the same account you subscribed with. Once authenticated, Claude Code is ready.
+
+:::callout[info]
+For full Claude Code documentation, visit [docs.anthropic.com/en/docs/claude-code](https://docs.anthropic.com/en/docs/claude-code).
+:::
+
+---
+
 ## System Requirements
 
 Before installing Quack, ensure your system meets these requirements:
