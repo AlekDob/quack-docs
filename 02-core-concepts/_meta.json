@@ -5,6 +5,7 @@
   "pages": [
     "side-panel",
     "kanban-board",
+    "automations",
     "second-brain",
     "brain-ui",
     "brain-timeline",
