@@ -1,3 +1,26 @@
+<div class="docs-video-container" style="position:relative;width:100%;max-width:800px;margin:0 auto 2rem auto;">
+  <div
+    id="quack-demo-player"
+    onclick="(function(el){var iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/2onnvnf-SN8?autoplay=1&rel=0';iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';iframe.allowFullscreen=true;iframe.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:12px;';el.innerHTML='';el.appendChild(iframe);})(this)"
+    style="position:relative;padding-bottom:56.25%;height:0;cursor:pointer;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 8px 32px rgba(0,0,0,0.4);"
+  >
+    <img
+      src="https://i.ytimg.com/vi/2onnvnf-SN8/maxresdefault.jpg"
+      alt="Quack - The Most Productive Way to Use Claude Code"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:12px;"
+    />
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);border-radius:12px;">
+      <div style="width:72px;height:72px;background:rgba(255,255,255,0.95);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left:4px;">
+          <path d="M8 5.14V19.14L19 12.14L8 5.14Z" fill="#FF6B35"/>
+        </svg>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:14px;right:16px;background:rgba(0,0,0,0.7);color:#fff;font-size:13px;font-family:inherit;padding:3px 8px;border-radius:6px;letter-spacing:0.02em;">14:32</div>
+  </div>
+  <p style="text-align:center;margin-top:10px;font-size:13px;color:#888;font-style:italic;">Language: English (with extra mozzarella) 🇮🇹</p>
+</div>
+
 Welcome to **Quack** - your multi-agentic IDE powered by Claude Code!
 
 
