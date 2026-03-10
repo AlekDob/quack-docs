@@ -8,47 +8,15 @@ Claude is unmatched for complex architecture and production code. But experiment
 - **Run experiments for free** via Ollama's cloud tier
 - **Get coding plans from $3/month** with surprisingly capable models
 
-## Method 1: Quack GUI (Recommended)
-
-Quack has native multi-provider support. No terminal commands needed.
-
-### Step 1: Open Settings
-
-Click **Settings** in the bottom-left corner, then navigate to **Claude Code**.
-
-### Step 2: Select Provider
-
-Under **LLM Provider**, change the **Provider** dropdown from `Anthropic` to `Ollama (Local)`.
-
-![Quack Settings — LLM Provider set to Ollama with kimi-k2.5:cloud selected](/images/screenshots/quack-ollama-settings.png)
-
-The **Base URL** auto-fills to `http://localhost:11434`. If Ollama is running, you'll see a green **Connected** status.
-
-### Step 3: Pick a Model
-
-Choose from the **Model** dropdown or type a model name manually. Cloud models (hosted by Ollama) have the `:cloud` suffix:
-
-- `kimi-k2.5:cloud` — Best for TypeScript/React work
-- `minimax-m2.5:cloud` — Fast code reviews and refactoring
-- `glm-5:cloud` — Solid all-rounder
-
-### Step 4: Start a New Chat
-
-The provider switch takes effect on the next chat. You'll see the model name in the status bar at the bottom.
-
-![Quack chat with Ollama provider — kimi-k2.5:cloud shown in status bar](/images/screenshots/quack-provider-switch.png)
-
-> **Important**: You cannot switch providers mid-session. Always start a fresh chat when changing models.
-
 ---
 
-## Method 2: Claude Code CLI
+## Step 1: Install Ollama
 
-If you prefer the terminal, two environment variables are all you need.
+Before using alternative models in Quack or Claude Code, you need Ollama running on your machine. Ollama acts as a local proxy that speaks the Anthropic API protocol.
 
-### Prerequisites
+### Install
 
-Install Ollama from [ollama.com](https://ollama.com):
+Download from [ollama.com](https://ollama.com), or use your package manager:
 
 **macOS:**
 ```bash
@@ -60,25 +28,75 @@ brew install ollama
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-**Windows:** Download the installer from ollama.com.
+**Windows:** Download the installer from [ollama.com](https://ollama.com) and run it.
+
+Ollama starts as a background service on `localhost:11434`.
 
 ### Sign In (Required for Cloud Models)
 
-Create an account on ollama.com, then:
+Cloud models are hosted on Ollama's infrastructure — free, no GPU needed. To access them, create an account on [ollama.com](https://ollama.com), then:
 
 ```bash
 ollama signin
 ```
 
-### Verify Ollama Is Running
+### Verify It's Running
 
 ```bash
 curl http://localhost:11434/api/tags
 ```
 
-You should see a JSON response with available models.
+You should see a JSON response. If you get a connection error, start Ollama manually.
 
-### Launch Claude Code with an Alternative Model
+### Test a Cloud Model
+
+Try running a model to make sure everything works:
+
+```bash
+ollama run kimi-k2.5:cloud
+```
+
+Cloud models have the `:cloud` suffix. They run on Ollama's servers, so they don't use your local resources.
+
+---
+
+## Step 2: Configure in Quack
+
+Once Ollama is installed and running, Quack can connect to it with a few clicks.
+
+### Open Settings
+
+Click **Settings** in the bottom-left corner, then navigate to **Claude Code**.
+
+### Select Provider
+
+Under **LLM Provider**, change the **Provider** dropdown from `Anthropic` to `Ollama (Local)`.
+
+![Quack Settings — LLM Provider set to Ollama with kimi-k2.5:cloud selected](/images/screenshots/quack-ollama-settings.png)
+
+The **Base URL** auto-fills to `http://localhost:11434`. If Ollama is running, you'll see a green **Connected** status.
+
+### Pick a Model
+
+Choose from the **Model** dropdown or type a model name manually. Recommended cloud models:
+
+- `kimi-k2.5:cloud` — Best for TypeScript/React work
+- `minimax-m2.5:cloud` — Fast code reviews and refactoring
+- `glm-5:cloud` — Solid all-rounder
+
+### Start a New Chat
+
+The provider switch takes effect on the next chat. You'll see the model name in the status bar at the bottom.
+
+![Quack chat with Ollama provider — kimi-k2.5:cloud shown in status bar](/images/screenshots/quack-provider-switch.png)
+
+> **Important**: You cannot switch providers mid-session. Always start a fresh chat when changing models.
+
+---
+
+## Alternative: Claude Code CLI
+
+If you prefer the terminal (without Quack), two environment variables are all you need:
 
 ```bash
 ANTHROPIC_BASE_URL=http://localhost:11434 ANTHROPIC_AUTH_TOKEN=ollama claude --model kimi-k2.5:cloud
@@ -196,18 +214,10 @@ claude --model kimi-k2.5
 
 ---
 
-## The Sweet Spot
-
-- **Chinese models** → experiments, side projects, quick iterations
-- **Claude** → production code, architecture, the stuff that matters
-
-Not a replacement. A seriously good complement.
-
----
-
 ## Gotchas
 
-1. **No mid-session switching.** Start a fresh chat when changing providers. Mixing providers causes invalid thinking block signature errors.
-2. **Cloud models need `ollama signin`.** Without it, you only get local models.
-3. **Non-Claude models may have reduced context**, no extended thinking, and variable tool-use quality. Quack shows a warning banner about this.
-4. **Rate limits on free tier.** Ollama's cloud models are rate-limited. For heavy use, get a paid plan.
+1. **Install Ollama first.** Quack needs Ollama running locally before it can connect. No Ollama = no alternative models.
+2. **No mid-session switching.** Start a fresh chat when changing providers. Mixing providers causes invalid thinking block signature errors.
+3. **Cloud models need `ollama signin`.** Without it, you only get local models.
+4. **Non-Claude models may have reduced context**, no extended thinking, and variable tool-use quality. Quack shows a warning banner about this.
+5. **Rate limits on free tier.** Ollama's cloud models are rate-limited. For heavy use, get a paid plan.
