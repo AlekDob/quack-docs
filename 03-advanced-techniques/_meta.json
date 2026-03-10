@@ -4,7 +4,6 @@
   "order": 3,
   "pages": [
     "prompt-engineering",
-    "alternative-models",
     "code-graph-mcp",
     "git-worktree",
     "agent-browser-overview",

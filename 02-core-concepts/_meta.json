@@ -17,6 +17,7 @@
     "ai-image-generation",
     "project-grouping",
     "branch-per-session",
-    "delegation-rule"
+    "delegation-rule",
+    "setting-ollama"
   ]
 }
